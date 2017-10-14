@@ -52,12 +52,12 @@ export const receiveConnect = () => ( { type: HAPPYCHAT_IO_RECEIVE_CONNECT } );
  * Returns an action object for the disconnect event,
  * as it was received from Happychat.
  *
- * @param { String } errorStatus The error
+ * @param { String } error The error
  * @return { Object } Action object
  */
-export const receiveDisconnect = errorStatus => ( {
+export const receiveDisconnect = error => ( {
 	type: HAPPYCHAT_IO_RECEIVE_DISCONNECT,
-	errorStatus,
+	error,
 } );
 
 /**
@@ -81,12 +81,12 @@ export const receiveInit = user => ( { type: HAPPYCHAT_IO_RECEIVE_INIT, user } )
  * Returns an action object for the unauthorized event,
  * as it was received from Happychat
  *
- * @param { String } errorStatus Error reported
+ * @param { String } error Error reported
  * @return { Object } Action object
  */
-export const receiveUnauthorized = errorStatus => ( {
+export const receiveUnauthorized = error => ( {
 	type: HAPPYCHAT_IO_RECEIVE_UNAUTHORIZED,
-	errorStatus,
+	error,
 } );
 
 /**
