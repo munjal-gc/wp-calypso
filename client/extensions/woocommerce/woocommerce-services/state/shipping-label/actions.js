@@ -329,7 +329,7 @@ export const submitAddressForNormalization = ( orderId, siteId, group ) => ( dis
 		if ( ! success ) {
 			return;
 		}
-		const { values, normalized, expanded } = shippingLabel.form[ group ];
+		const { values, normalized, expanded } = getShippingLabel( getState(), orderId, siteId ).form[ group ];
 
 		if ( isEqual( values, normalized ) ) {
 			if ( expanded ) {
